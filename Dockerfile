@@ -1,13 +1,10 @@
 # Usar la imagen oficial de n8n
 FROM n8nio/n8n
 
-# Configuración de autenticación básica
+# Variables de autenticación
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=BryDev
 ENV N8N_BASIC_AUTH_PASSWORD=011224
 
-# Puerto de exposición
+# Exponer puerto
 EXPOSE 5678
-
-# Comando para ejecutar n8n
-CMD ["n8n"]
