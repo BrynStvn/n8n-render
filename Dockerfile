@@ -1,10 +1,11 @@
-# Usar la imagen oficial de n8n
-FROM n8nio/n8n
+# Usa la imagen oficial de n8n
+FROM n8nio/n8n:latest
 
-# Variables de autenticación
-ENV N8N_BASIC_AUTH_ACTIVE=true
-ENV N8N_BASIC_AUTH_USER=Bry
-ENV N8N_BASIC_AUTH_PASSWORD=Ingeniero011224
+# Puerto que usará n8n (Render lo manejará automáticamente)
+ENV N8N_PORT=$PORT
 
-# Exponer puerto
-EXPOSE 5678
+# Configuraciones adicionales (opcional)
+ENV N8N_HOST=0.0.0.0
+
+# Comando para iniciar n8n
+CMD ["n8n", "start"]
