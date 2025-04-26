@@ -6,6 +6,3 @@ ENV N8N_PORT=$PORT
 
 # Configuraciones adicionales (opcional)
 ENV N8N_HOST=0.0.0.0
-
-# Comando para iniciar n8n
-CMD ["n8n", "start"]
